@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/styled_text.dart';
 
 // const vs final
 /// const is compiled-time constants where as final is runtime constants
@@ -12,6 +11,7 @@ class GradientContainer extends StatelessWidget {
     this.colors, {
     super.key,
   }); //key needes to be forwared to StatelessWidget parent class
+
   final List<Color> colors;
 
   // Color.fromARGB(255, 70, 32, 137),
@@ -27,7 +27,12 @@ class GradientContainer extends StatelessWidget {
           colors: colors,
         ),
       ),
-      child: const Center(child: StyledText('Hello World, Sadim Mali')),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice-1.png',
+          width: 200,
+        ),
+      ),
     );
   }
 }
