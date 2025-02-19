@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/dice_roller.dart';
 
 // const vs final
 /// const is compiled-time constants where as final is runtime constants
@@ -14,9 +15,6 @@ class GradientContainer extends StatelessWidget {
 
   final List<Color> colors;
 
-  // Color.fromARGB(255, 70, 32, 137),
-  // Color.fromARGB(255, 96, 26, 125),
-
   @override
   Widget build(context) {
     return Container(
@@ -28,10 +26,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-1.png',
-          width: 200,
-        ),
+        child: DiceRoller(),
       ),
     );
   }
